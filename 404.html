@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Page Not Found | Ace My Assessments</title>
-    <!-- Immediate redirect to home -->
-    <meta http-equiv="refresh" content="0;url=/">
+    <!-- Delayed redirect to home (3 seconds) -->
+    <meta http-equiv="refresh" content="3;url=index.html">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -110,15 +110,15 @@
         <h1>404</h1>
         <h2>Oops! Page Not Found</h2>
         <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
-        <a href="/" class="btn-home">Back to Home</a>
+        <a href="index.html" class="btn-home">Back to Home</a>
         <div class="countdown">
             Redirecting you to the homepage...
         </div>
     </div>
 
-    <script>
-        window.location.href = '/';
-    </script>
+        setTimeout(function() {
+            window.location.href = 'index.html';
+        }, 3000);
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
