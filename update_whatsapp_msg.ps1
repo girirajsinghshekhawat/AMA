@@ -1,7 +1,7 @@
 $files = Get-ChildItem -Path . -Filter *.html -Recurse
 
 $oldLink = "https://wa.me/918107057573"
-$newLink = "https://wa.me/918107057573?text=hi%20i%20visisted%20your%20website%20(acemeassignment.com).%20i%20am%20intrested%20in%20your%20services."
+$newLink = "https://wa.me/918107057573?text=hi%20i%20visisted%20your%20website%20(acemyassessments.com).%20i%20am%20intrested%20in%20your%20services."
 
 foreach ($file in $files) {
     Write-Host "Processing $($file.FullName)..."
