@@ -4873,6 +4873,19 @@
         }
 
         @media (max-width: 768px) {
+          .expert-card {
+            padding-top: 70px;
+            margin-top: 50px;
+            min-height: auto;
+          }
+          .image-outer {
+            left: 50%;
+            transform: translateX(-50%);
+            top: -40px;
+          }
+          .expert-name, .stars, .expert-card [style*="text-align: right"] {
+            text-align: center !important;
+          }
 
           .hm4-testimonial-swiper .swiper-slide,
           .hm4-testimonial-swiper .swiper-slide.swiper-slide-active,
@@ -4886,18 +4899,18 @@
 
         @media (max-width: 480px) {
           .expert-card {
-            padding: 15px;
-            margin: 0 auto 15px;
+            padding: 70px 15px 30px;
+            margin: 50px 10px 20px;
           }
 
           .hire-btn,
           .about-btn {
-            font-size: .7rem;
-            padding: 6px;
+            font-size: .8rem;
+            padding: 10px 12px;
           }
 
           .testimonial-section-four {
-            padding: 0px 0px !important;
+            padding: 10px 0px !important;
           }
         }
       </style>
