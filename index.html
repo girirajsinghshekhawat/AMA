@@ -1830,7 +1830,7 @@
                       <label for="q_phone">Phone number</label>
                       <div class="phone-field" id="phoneField">
                         <button type="button" class="cc-btn" id="ccBtn">
-                          <span class="cc-flag" id="ccFlag">????</span>
+                          <span class="cc-flag" id="ccFlag"><img src="https://flagcdn.com/w20/gb.png" srcset="https://flagcdn.com/w40/gb.png 2x" width="20" alt="United Kingdom"></span>
                           <span class="cc-code" id="ccCode">+44</span>
                           <span class="cc-caret">&blacktriangledown;</span>
                         </button>
@@ -1894,7 +1894,7 @@
 
                   <button type="submit" class="mini-submit" id="submitBtn">
                     <span class="btn-text" id="btnText">Chat with experts now</span>
-                    <span class="spinner" id="spinner" style="display:none;">⏳</span>
+                    <span class="spinner" id="spinner" style="display:none;"></span>
                   </button>
                 </form>
               </div>
@@ -1990,6 +1990,11 @@
                   border: 1px solid var(--accent);
                   background: #fff;
                   overflow: visible;
+                }
+
+                .cc-flag img, .cc-item-flag img {
+                  display: block;
+                  border-radius: 2px;
                 }
 
                 .cc-btn {
@@ -2105,6 +2110,22 @@
                 .mini-submit:hover {
                   transform: translateY(-1px);
                   background: linear-gradient(135deg, rgba(63, 21, 154, 1), rgba(14, 143, 206, 1));
+                }
+
+                .spinner {
+                  display: inline-block;
+                  width: 16px;
+                  height: 16px;
+                  border: 2px solid rgba(255, 255, 255, 0.3);
+                  border-radius: 50%;
+                  border-top-color: #fff;
+                  animation: spin 1s ease-in-out infinite;
+                  margin-left: 8px;
+                  vertical-align: middle;
+                }
+
+                @keyframes spin {
+                  to { transform: rotate(360deg); }
                 }
 
                 .toast {
@@ -2411,13 +2432,14 @@
                   const ccList = document.getElementById('ccList');
 
                   function getFlag(iso) {
-                    return iso.toUpperCase().replace(/./g, char => String.fromCodePoint(char.charCodeAt(0) + 127397));
+                    const low = iso.toLowerCase();
+                    return `<img src="https://flagcdn.com/w20/${low}.png" srcset="https://flagcdn.com/w40/${low}.png 2x" width="20" alt="${iso}">`;
                   }
 
                   function renderCountries(list = COUNTRIES) {
                     ccList.innerHTML = list.map(c => `
       <div class="cc-item" data-name="${c.n.toLowerCase()}" data-iso="${c.i}" data-dial="${c.d}">
-        <span>${getFlag(c.i)}</span>
+        <span class="cc-item-flag">${getFlag(c.i)}</span>
         <span>${c.n}</span>
         <span style="margin-left:auto; font-weight:700;">${c.d}</span>
       </div>
@@ -2425,11 +2447,18 @@
                   }
 
                   function selectCountry(iso, dial) {
-                    document.getElementById('ccFlag').textContent = getFlag(iso);
+                    document.getElementById('ccFlag').innerHTML = getFlag(iso);
                     document.getElementById('ccCode').textContent = dial;
                     document.getElementById('countryCodeHidden').value = dial;
                     document.getElementById('countryIsoHidden').value = iso;
                     ccMenu.classList.remove('open');
+                  }
+
+                  // Initialize flag on load
+                  const initialIso = document.getElementById('countryIsoHidden').value;
+                  const initialDial = document.getElementById('countryCodeHidden').value;
+                  if (initialIso && initialDial) {
+                    selectCountry(initialIso, initialDial);
                   }
 
                   ccList.addEventListener('click', (e) => {
@@ -5983,7 +6012,7 @@
               <div class="info"><span>Total Words:</span><span>1290</span></div>
               <div class="info"><span>Paper Type:</span><span>Assignment</span></div>
 
-              <a href="free-samples/Nursing/a-review-of-mental-health-policies-in-the-nhs-a-uk-perspective"
+              <a href="https://wa.me/918107057573?text=Hi, I am interested in viewing a sample on Topic: Review of Mental Health Policies in the NHS (UK). (acemeassignment.com)"
                 class="view-button">View Sample</a>
 
             </div>
@@ -6005,7 +6034,7 @@
               <div class="info"><span>Total Words:</span><span>1428</span></div>
               <div class="info"><span>Paper Type:</span><span>Assignment</span></div>
 
-              <a href="free-samples/English/exploring-british-identity-in-post-brexit-literature"
+              <a href="https://wa.me/918107057573?text=Hi, I am interested in viewing a sample on Topic: British Identity in Post-Brexit Literature. (acemeassignment.com)"
                 class="view-button">View Sample</a>
 
             </div>
@@ -6027,7 +6056,7 @@
               <div class="info"><span>Total Words:</span><span>1229</span></div>
               <div class="info"><span>Paper Type:</span><span>Assignment</span></div>
 
-              <a href="free-samples/marketing/marketing-strategy-analysis-of-tesco-plc-in-the-uk-retail-sector"
+              <a href="https://wa.me/918107057573?text=Hi, I am interested in viewing a sample on Topic: Tesco Marketing Strategy in Retail. (acemeassignment.com)"
                 class="view-button">View Sample</a>
 
             </div>
@@ -6035,7 +6064,7 @@
         </div>
 
         <div style="display:flex; justify-content:center;">
-          <a class="trust-cta" href="free-samples">View More Samples</a>
+          <a class="trust-cta" href="https://wa.me/918107057573?text=Hi, I want to see more assignment samples. (acemeassignment.com)">View More Samples</a>
         </div>
 
       </div>
