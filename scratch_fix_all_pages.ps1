@@ -80,7 +80,7 @@ $termsMiddle = @"
               <h4 style="color:#0E8FCE; margin-top:40px; margin-bottom:15px; font-weight:600;">9. Contact Us</h4>
               <p style="font-size:16px; color:#555; margin-bottom:20px;">For any queries regarding these terms, please reach out to us:</p>
               <ul style="list-style:square; padding-left:20px; color:#555;">
-                <li><strong>Email:</strong> info@acemyassessments.com</li>
+                <li><strong>Email:</strong> admin@acemyassessments.com</li>
                 <li><strong>WhatsApp:</strong> +91 8107057573</li>
                 <li><strong>Address:</strong> 3615, Jagannath Shah Ka Rasta, Handipura, Jaipur 302002</li>
               </ul>
