@@ -4255,7 +4255,7 @@
                             rel="noopener noreferrer" target="_blank">LinkedIn Profile</a></strong></p>
                     </div>
                       <p></p>
-                    </div>
+                    
 
                     <div class="expert-box">
                       <div class="expert-box-item">
@@ -4324,7 +4324,7 @@
                             rel="noopener noreferrer" target="_blank">Google Scholar Profile</a></strong></p>
                     </div>
                       <p></p>
-                    </div>
+                    
 
                     <div class="expert-box">
                       <div class="expert-box-item">
@@ -4393,7 +4393,7 @@
                             rel="noopener noreferrer" target="_blank">Academic Profile</a></strong></p>
                     </div>
                       <p></p>
-                    </div>
+                    
 
                     <div class="expert-box">
                       <div class="expert-box-item">
@@ -4456,8 +4456,9 @@
                         for being structured, concise, and aligned with specific academic requirements. I ensure proper
                         referencing, plagiarism-free content, and timely delivery for every order. Students looking for
                         precise, high-quality academic content can approach me anytime.</p>
-                      <p></p>
                     </div>
+                      <p></p>
+                    
 
                     <div class="expert-box">
                       <div class="expert-box-item">
@@ -4523,8 +4524,9 @@
                       <p><span style="background-color: transparent; color: rgb(0, 0, 0);">Read more about writers-
                         </span><strong style="background-color: transparent; color: rgb(17, 85, 204);"><u><a
                               href="https://wa.me/918107057573?text=Hi, I want to see Dr. Sneha Gupta's profile. (acemeassignment.com)" rel="noopener noreferrer" target="_blank">Writers Profile</a></u></strong></p>
-                      <p></p>
                     </div>
+                      <p></p>
+                    
 
                     <div class="expert-box">
                       <div class="expert-box-item">
@@ -4696,12 +4698,11 @@
 
         .image-outer {
           position: absolute;
-          top: 18px;
-          left: 40px;
+          top: -30px;
+          left: 20px;
           width: 80px;
           height: 80px;
-          overflow: hidden;
-          border-radius: 50%;
+          z-index: 10;
         }
 
         .image {
@@ -4777,15 +4778,18 @@
 
         .expert-card {
           background: rgba(255, 255, 255, 0.96);
-          padding: 20px;
+          padding: 60px 20px 20px; /* Increased top padding to accommodate absolute image */
           position: relative;
-          margin: 10px;
+          margin: 40px 10px 10px; /* Increased top margin to accommodate absolute image */
           border-radius: 14px;
           border: 1px solid rgba(72, 33, 195, 0.25);
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
           text-align: center;
           transition: .3s;
           z-index: 1;
+          min-height: 480px; /* Ensure consistent height */
+          display: flex;
+          flex-direction: column;
         }
 
         .expert-card:hover {

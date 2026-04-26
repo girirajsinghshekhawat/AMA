@@ -4680,12 +4680,11 @@
 
         .image-outer {
           position: absolute;
-          top: 18px;
-          left: 40px;
+          top: -30px;
+          left: 20px;
           width: 80px;
           height: 80px;
-          overflow: hidden;
-          border-radius: 50%;
+          z-index: 10;
         }
 
         .image {
@@ -4761,15 +4760,18 @@
 
         .expert-card {
           background: rgba(255, 255, 255, 0.96);
-          padding: 20px;
+          padding: 60px 20px 20px; /* Increased top padding to accommodate absolute image */
           position: relative;
-          margin: 10px;
+          margin: 40px 10px 10px; /* Increased top margin to accommodate absolute image */
           border-radius: 14px;
           border: 1px solid rgba(72, 33, 195, 0.25);
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
           text-align: center;
           transition: .3s;
           z-index: 1;
+          min-height: 480px; /* Ensure consistent height */
+          display: flex;
+          flex-direction: column;
         }
 
         .expert-card:hover {
